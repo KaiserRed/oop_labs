@@ -1,0 +1,5 @@
+/home/alexey/code/oop_labs/LW_1/build/CMakeFiles/main.dir
+/home/alexey/code/oop_labs/LW_1/build/CMakeFiles/test1.dir
+/home/alexey/code/oop_labs/LW_1/build/CMakeFiles/test.dir
+/home/alexey/code/oop_labs/LW_1/build/CMakeFiles/edit_cache.dir
+/home/alexey/code/oop_labs/LW_1/build/CMakeFiles/rebuild_cache.dir

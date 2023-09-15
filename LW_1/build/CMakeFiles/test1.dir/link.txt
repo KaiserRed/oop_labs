@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test1.dir/test1.cpp.o CMakeFiles/test1.dir/time.cpp.o -o test1  /usr/lib/x86_64-linux-gnu/libgtest.a 

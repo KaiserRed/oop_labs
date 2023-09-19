@@ -1,8 +1,6 @@
 #include "time.hpp"
-#include <iostream>
 
-std::string time(std::string &s)
-{
+std::string time(std::string &s){
     std::string hours, min, d, answer;
     int a = 0;
     for (char c : s){
@@ -29,5 +27,6 @@ std::string time(std::string &s)
     if (hours.size() < 2)
         hours = '0' + hours;
     answer = hours + min;
+    
     return answer;
 }

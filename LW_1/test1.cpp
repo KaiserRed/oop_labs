@@ -19,6 +19,18 @@ TEST(test_03, basic_test_set)
     ASSERT_TRUE(time(s)== "0049");
 }
 
+TEST(test_04, basic_test_set)
+{
+    std::string s = "1:15 pm";
+    ASSERT_TRUE(time(s)== "1315");
+}
+
+TEST(test_05, basic_test_set)
+{
+    std::string s = "4:20 am";
+    ASSERT_TRUE(time(s)== "0420");
+}
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

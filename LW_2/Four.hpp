@@ -29,7 +29,7 @@ public:
     bool operator>(const Four other) const;              
     bool operator>=(const Four other) const;             
 
-    ~Four() noexcept; //* Destructor
+    ~Four() noexcept; 
 private:
     size_t size;
     unsigned char *number;

@@ -26,10 +26,8 @@ Four::Four(const std::initializer_list<unsigned char> &t) {
     number = new unsigned char[t.size()];
     size = t.size();
     size_t i{size};
-    for (unsigned char c : t)
-    {
-        if (!isFour(c))
-        {
+    for (unsigned char c : t) {
+        if (!isFour(c)) {
             throw std::logic_error("Four digit can't be more than 3");
         }
         number[--i] = c;
@@ -39,10 +37,8 @@ Four::Four(const std::initializer_list<unsigned char> &t) {
 Four::Four(const std::string t) {
     size = t.size();
     number = new unsigned char[size];
-    for (size_t i = size - 1, j = 0; j < size; i--, j++)
-    {
-        if (!isFour(t[i]))
-        {
+    for (size_t i = size - 1, j = 0; j < size; i--, j++) {
+        if (!isFour(t[i])) {
             throw std::logic_error("Four digit can't be more than 3");
         }
         number[i] = t[j];
@@ -52,8 +48,7 @@ Four::Four(const std::string t) {
 Four::Four(const Four &other) {
     size = other.size;
     number = new unsigned char[size];
-    for (size_t i = 0; i < size; i++)
-    {
+    for (size_t i = 0; i < size; i++) {
         number[i] = other.number[i];
     }
 }
@@ -61,7 +56,6 @@ Four::Four(const Four &other) {
 Four::Four(Four &&other) noexcept {
     size = other.size;
     number = other.number;  
-
     other.size = 0;
     other.number = nullptr;
 }
@@ -85,7 +79,6 @@ Four Four::operator+(const Four &other) const {
     for (size_t i = 0; i < resultSize; i++) {
         int d1 = (i < size) ? (number[i] - '0') : 0;
         int d2 = (i < other.size) ? (other.number[i] - '0') : 0;
-
         int sum = d1 + d2 + carry;
         result[i] = (sum % 4) + '0';
         carry = sum / 4;
@@ -128,8 +121,7 @@ Four Four::operator-(const Four &other) const {
     return Four(result);
 }
 
-bool Four::operator==(const Four &other) const
-{
+bool Four::operator==(const Four &other) const {
     if (&other == this) {
         return true;
     }
@@ -144,16 +136,14 @@ bool Four::operator==(const Four &other) const
     return true;
 }
 
-bool Four::operator!=(const Four &other) const
-{
+bool Four::operator!=(const Four &other) const {
     if (*this == other) {
         return false;
     }
     return true;
 }
 
-bool Four::operator<(const Four &other) const
-{
+bool Four::operator<(const Four &other) const {
     if (&other == this) {
         return false;
     }
@@ -201,8 +191,7 @@ bool Four::operator>=(const Four other) const {
     return true;
 }
 
-std::ostream &Four::print(std::ostream &os)
-{
+std::ostream &Four::print(std::ostream &os) {
     for (size_t i = size; i--;) {
         os << number[i];
     }

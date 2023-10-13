@@ -67,13 +67,13 @@ TEST(test11, addition1) {
     ASSERT_TRUE((num1 + num2) == Four("11"));
 }
 
-TEST(test12, substraction1) {
+TEST(test12, subtraction1) {
     Four num1("32");
     Four num2({'3'});
     ASSERT_TRUE((num1 - num2) == Four("23"));
 }
 
-TEST(test13, substraction2) {
+TEST(test13, subtraction2) {
     Four num1("21");
     Four num2({'1'});
     ASSERT_TRUE((num1 - num2) == Four("20"));

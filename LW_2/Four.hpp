@@ -35,4 +35,4 @@ private:
     unsigned char *number;
 };
 
-bool isElevenDigit(const char &c);
+bool isFour(const char &c);

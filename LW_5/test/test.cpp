@@ -61,7 +61,7 @@ TEST(ListTest, PopBack) {
     list.PopBack();
     EXPECT_EQ(list.Size(), 2);
     EXPECT_EQ(list.Head(), 26);
-    //EXPECT_EQ(list.Tail(), 5);   
+    EXPECT_EQ(list.Tail(), 5);   
 }
 
 TEST(ListTest, PopFront) {

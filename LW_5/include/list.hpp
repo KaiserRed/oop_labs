@@ -70,6 +70,7 @@ public:
             tail = head.get();
         } else {
             tail->next = NodePointer(node, NodeDelete{&nodeAllocator});
+            node->prev = tail;
             tail = node;
         }
         ++size;

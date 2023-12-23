@@ -12,7 +12,7 @@ set(TEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/test)
 
 include_directories(${INCLUDE_DIR})
 
-file(GLOB_RECURSE SOURCES LIST_DIRECTORIES false bandit.cpp elf.cpp factory.cpp npc.cpp observer.cpp squirel.cpp visitor.cpp)
+file(GLOB_RECURSE SOURCES LIST_DIRECTORIES false bandit.cpp elf.cpp factory.cpp npc.cpp observer.cpp squirrel.cpp visitor.cpp)
 file(GLOB_RECURSE TEST_SOURCES LIST_DIRECTORIES false test.cpp)
 
 add_library(${CMAKE_PROJECT_NAME}_lib ${SOURCES})
